@@ -3,10 +3,7 @@
     "displayName": "Fruits Theme",
     "description": "Another vibrant dark theme",
     "version": "0.1.0",
-    "author": {
-        "name": "Alex Hirsch",
-        "url": "http://github.com/W4RH4WK"
-    },
+    "publisher": "W4RH4WK",
     "repository": {
         "type": "git",
         "url": "http://github.com/W4RH4WK/vscode-fruits"
