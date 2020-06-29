@@ -1,0 +1,81 @@
+{
+  "name": "Fruits",
+  "type": "dark",
+  "colors": {
+    "editor.foreground": "#D4D4D4"
+  },
+  "tokenColors": [
+    // Control-Flow
+    {
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#F1025B"
+      }
+    },
+    // Functions and Types
+    {
+      "scope": "entity.name",
+      "settings": {
+        "foreground": "#FFD700"
+      }
+    },
+    {
+      "scope": "entity.name.function",
+      "settings": {
+        "foreground": "#FF8000"
+      }
+    },
+    // Comments, Strings, and Namespaces
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#7A7A7A"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#D69D85"
+      }
+    },
+    // Keywords and Operators
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.namespace",
+        "entity.name.scope-resolution",
+      ],
+      "settings": {
+        "foreground": "#BDB76B"
+      }
+    },
+    // Directives
+    {
+      "scope": [
+        "keyword.control.directive.include",
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#A6F102"
+      }
+    },
+    // Support
+    {
+      "scope": "support.type",
+      "settings": {
+        "foreground": "#9CDCFE"
+      }
+    },
+    {
+      "scope": "storage",
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+  ]
+}

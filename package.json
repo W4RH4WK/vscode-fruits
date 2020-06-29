@@ -1,0 +1,32 @@
+{
+    "name": "fruits-theme",
+    "displayName": "Fruits Theme",
+    "description": "Another vibrant dark theme",
+    "version": "0.1.0",
+    "author": {
+        "name": "Alex Hirsch",
+        "url": "http://github.com/W4RH4WK"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/W4RH4WK/vscode-fruits"
+    },
+    "bugs": {
+        "url": "http://github.com/W4RH4WK/vscode-fruits/issues"
+    },
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Fruits",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Fruits-color-theme.json"
+            }
+        ]
+    }
+}
