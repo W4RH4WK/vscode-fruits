@@ -290,12 +290,6 @@
       }
     },
     {
-      "scope": "keyword.control",
-      "settings": {
-        "foreground": "#569CD6"
-      }
-    },
-    {
       "scope": "keyword.operator",
       "settings": {
         "foreground": "#D4D4D4"
@@ -428,7 +422,6 @@
     },
     {
       "scope": [
-        "keyword.control",
         "source.cpp keyword.operator.new",
         "keyword.operator.delete",
         "keyword.other.using",
@@ -565,12 +558,6 @@
     },
     {
       "scope": "keyword - keyword.operator",
-      "settings": {
-        "foreground": "#569CD6"
-      }
-    },
-    {
-      "scope": "keyword.control",
       "settings": {
         "foreground": "#569CD6"
       }
