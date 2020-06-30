@@ -226,7 +226,6 @@
     },
     {
       "scope": [
-        "string",
         "entity.name.operator.custom-literal.string",
         "meta.embedded.assembly"
       ],
