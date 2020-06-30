@@ -77,7 +77,7 @@
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "#A6F102"
+        "foreground": "#9CDCFE"
       }
     },
     {
@@ -293,12 +293,6 @@
       "scope": "keyword.control",
       "settings": {
         "foreground": "#569CD6"
-      }
-    },
-    {
-      "scope": "keyword.control.directive.include",
-      "settings": {
-        "foreground": "#A6F102"
       }
     },
     {
@@ -630,9 +624,27 @@
       }
     },
     {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#D4D4D4"
+      }
+    },
+    {
+      "scope": "entity.name.variable",
+      "settings": {
+        "foreground": "#D4D4D4"
+      }
+    },
+    {
       "scope": "keyword.control",
       "settings": {
         "foreground": "#F1025B"
+      }
+    },
+    {
+      "scope": "keyword.control.directive.include",
+      "settings": {
+        "foreground": "#A6F102"
       }
     },
     {
