@@ -14,7 +14,7 @@ It builds upon the following principles:
 
 ## Considerations
 
-- Using [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+- Using [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 - Changing variable coloring to adjust the overall color tone:
   ```
   "editor.tokenColorCustomizations": {
