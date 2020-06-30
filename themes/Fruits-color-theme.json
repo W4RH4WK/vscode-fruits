@@ -69,12 +69,6 @@
       }
     },
     {
-      "scope": "entity.name.tag.css",
-      "settings": {
-        "foreground": "#D7BA7D"
-      }
-    },
-    {
       "scope": "entity.other.attribute-name",
       "settings": {
         "foreground": "#9CDCFE"
@@ -93,7 +87,7 @@
         "entity.other.attribute-name.scss"
       ],
       "settings": {
-        "foreground": "#D7BA7D"
+        "foreground": "#A6F102"
       }
     },
     {
@@ -420,7 +414,6 @@
       "scope": [
         "source.cpp keyword.operator.new",
         "keyword.operator.delete",
-        "keyword.other.using",
         "keyword.other.operator",
         "entity.name.operator"
       ],
@@ -607,15 +600,18 @@
       }
     },
     {
-      "scope": "variable",
+      "scope": [
+        "variable",
+        "entity.name.variable"
+      ],
       "settings": {
         "foreground": "#D4D4D4"
       }
     },
     {
-      "scope": "entity.name.variable",
+      "scope": "source.shell variable",
       "settings": {
-        "foreground": "#D4D4D4"
+        "foreground": "#82c0e2"
       }
     },
     {
