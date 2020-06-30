@@ -1,0 +1,15 @@
+{
+  "integer": 42,
+  "float": 3.14,
+  "bool": true,
+  "string": "hello world",
+  "array": [
+    1,
+    2,
+    3
+  ],
+  "object": {
+    "foo": "bar",
+    "baz": "bam"
+  }
+}

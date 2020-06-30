@@ -1,0 +1,340 @@
+\documentclass[parskip=half]{scrbook}
+
+\title{Towards a Complete, Modern Thesis Template}
+\subtitle{Fighting an Uphill Battle Against \LaTeX}
+\author{Siegward of the Knights of Catarina}
+\date{\today}
+
+\newcommand{\thesistype}{Master's Thesis}
+\newcommand{\supervisor}{Siegmeyer of Catarina}
+
+\usepackage[utf8]{inputenc}
+
+% Math
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\usepackage{amssymb}
+\let\emptyset\varnothing
+
+% SI Units
+\usepackage[binary-units]{siunitx}
+\sisetup{detect-all}
+
+% References
+\usepackage[numbers]{natbib}
+\bibliographystyle{plainnat}
+
+% Color
+\usepackage{xcolor}
+\definecolor{linkcolor}{cmyk}{1.0, 0.6, 0.0, 0.56}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% Graphics
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Algorithms
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\newcommand\commentStyle[1]{\sffamily{#1}}
+\SetCommentSty{commentStyle}
+
+% Code
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	breakatwhitespace=false,
+	showstringspaces=false,
+	numbers=left,
+	tabsize=4,
+	numberbychapter=false,
+	captionpos=b,
+	frame=leftline,
+	framesep=2mm,
+	xleftmargin=8mm
+}
+\usepackage[outputdir=out]{minted}
+\usemintedstyle{tango}
+\setminted{
+	fontsize=\footnotesize,
+	tabsize=4,
+	linenos,
+	frame=leftline,
+	framesep=2mm,
+	xleftmargin=10mm
+}
+% Fix The 'listings' counter.
+\AtBeginEnvironment{listing}{\setcounter{listing}{\value{lstlisting}}}
+\AtEndEnvironment{listing}{\stepcounter{lstlisting}}
+% Fix listoflistings command.
+\providecommand{\listoflistings}{\lstlistoflistings}
+
+% Glossary
+\usepackage{glossaries}
+\makeglossaries
+\include{glossary}
+
+% Title
+\usepackage{titlepage}
+
+% Page
+\usepackage{appendix}
+\usepackage[margin=2cm,inner=2.5cm,includehead,includefoot]{geometry}
+%\usepackage[margin=1cm,inner=3.5cm,includehead,includefoot]{geometry} % booklet
+% \usepackage{showframe}
+\frenchspacing
+\usepackage{chngcntr}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+\counterwithout{equation}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% Font
+\usepackage{microtype}
+\usepackage{newtxtext,newtxmath}
+\usepackage[scale=0.88]{sourcecodepro}
+\usepackage[T1]{fontenc}
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	citecolor  = linkcolor,
+	linkcolor  = linkcolor,
+	urlcolor   = linkcolor,
+}
+\urlstyle{same}
+\usepackage[all]{hypcap}
+\usepackage[noabbrev]{cleveref}
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+\crefname{algocf}{algorithm}{algorithms}
+\Crefname{algocf}{Algorithm}{Algorithms}
+
+\usepackage{scrhack}
+
+% Custom packages
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\include{00_declaration}
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+\listoflistings
+\include{00_abstract}
+
+\mainmatter
+\chapter{Running Text}
+\label{chp:running_text}
+
+This chapter explains usage of elements that are commonly found in a document's text body.
+Figures and other elements are explained in \cref{chp:other_elements}.
+
+Turn to the \emph{Chicago Manual of Style}\footnote{\url{https://www.chicagomanualofstyle.org/}} when facing questions on how to structure or typeset beyond what is explained in this document.
+
+\section{Structure}
+
+Paragraphs are your building blocks for text.
+Each paragraph should serve one specific purpose.
+For instance, this one explains the concept of paragraphs, while the next one touches on following a golden thread.
+Do not hesitate to split paragraphs apart, it often improves readability.
+
+Following a golden thread is paramount.
+Organize your paragraphs thoughtfully, pay attention to use terms and phrases only after they have been explained.
+A good approach is to start off with a question, slowly working towards the answer.
+Any decisions and assumptions should be justified along the way.
+
+As this template is based on a book template, \emph{chapter} is the top most level.
+\emph{Parts} should only be used under exceptional circumstances.
+Beyond that, \emph{section} and \emph{subsection} are your bread and butter.
+Going even further, by using \emph{subsubsection}, \emph{paragraph}, and even \emph{subparagraph} is possible, yet discouraged.
+This is reflected by the automatic numbering and table of content depth.
+Consider hiding \emph{subsections} in the table of content if you only use them occasionally.
+
+List of figures, list of tables, etc. are populated automatically; however, remove them if they have less than twelve entries.
+
+As the input code is typically managed by a version control system, it is highly recommended to break lines after each sentence.
+
+\section{Text Modifiers}
+
+The most important text modifiers are \emph{emphasis} and \texttt{teletype}.
+Please prefer emphasis to quotation marks.
+
+As the text body uses roman font, \textsf{sans serif} can be used on special occasions.
+
+\section{Spaces}
+
+As this template uses \emph{french spacing}, spaces after colons and dots not terminating a sentence don't have to be escaped.
+Yet, use non-breaking spaces where adequate, like for units and currencies, for initials, etc.
+
+\section{Glossary}
+
+Use the \texttt{glossaries} packages for acronyms and alike.
+It automatically takes care of expanding and contracting phrases.
+Here is an example: first use of \gls{dag} followed by second use of \gls{dag}.
+
+It is recommended to execute \texttt{\textbackslash{}glsresetall} when starting a new chapter.
+As there doesn't seem to be a sane way of automating this, you have to do it manually.
+
+\section{References}
+
+This section explains various ways of include references.
+
+\subsection{Hyperlinks}
+
+Hyperlinks are an essential tool for referencing external sources.
+Using the \texttt{\textbackslash{}url} command will output the given URL and attach a corresponding link.
+Do not attach links to regular text as they get lost when printing the document.
+
+As an example, the official university website: \url{https://www.uibk.ac.at/}.
+
+\subsection{Footnotes}
+
+Footnotes are great for attaching links or side notes to text.
+Use them for less important references that would only clutter the bibliography.
+This text has a footnote\footnote{Footnote content should be a link or a complete sentence.} attached to it.
+
+\subsection{Citations}
+
+The book \emph{Principles of Program Analysis}~\cite{Nielson:ppa} is referenced here to serve as an example.
+Always follow a quotation with a non-breaking space and the reference --- providing page numbers is recommended.
+
+Most of the time you will just paraphrase instead of quoting someone word by word.
+However, if you do, put the quotation inline surrounded by quotation marks.
+Formatting should be included as well.
+For instance: ``In \emph{Data Flow Analysis} it is customary to think of a program as a graph: the nodes are the elementary blocks and the edges describe how control might pass from one elementary block to another.''~\cite[p.~5]{Nielson:ppa}.
+
+\subsection{Blockquotes}
+
+On other occasions, quoting a whole block may be more adequate.
+Use the \texttt{quote} environment to do so, attaching the reference as before.
+
+\begin{quote}
+	In summary, we have thus seen a very strong connection between the equational approach and the constraint based approach.
+	This connection is not always as apparent as it is here: one of the characteristics of the constraint based approach is that often constraints with the same left hand side are generated at many different places in the program and therefore it may require serious work to collect them.~\cite[p.~10]{Nielson:ppa}
+\end{quote}
+
+\section{Lists}
+
+Lists are extremely useful to improve the structure of certain parts.
+Do not hesitate to use them.
+
+They come in different forms as illustrated below.
+
+\subsection{Bullets}
+
+\begin{itemize}
+	\item One entry in the list
+	\item Another entry in the list
+	      \begin{itemize}
+		      \item Nested list element
+	      \end{itemize}
+\end{itemize}
+
+\subsection{Enumeration}
+
+\begin{enumerate}
+	\item One entry in the list
+	\item Another entry in the list
+	      \begin{enumerate}
+		      \item Nested list element
+	      \end{enumerate}
+\end{enumerate}
+
+\subsection{Description}
+
+\begin{description}
+	\item[First] One entry in the list
+	\item[Second] Another entry in the list
+\end{description}
+
+Alternatively you may force line breaks after the descriptor.
+
+\begin{description}
+	\item[First]\hfill\\
+	      One entry in the list
+	\item[Second]\hfill\\
+	      Another entry in the list
+\end{description}
+
+\section{Math}
+
+Mathematics is such a big part of scientific writing that it is considered part of the regular text body.
+There are various ways to typeset mathematical expressions, the most important ones are shown in this section.
+
+\subsection{Inline Math and Display Math}
+
+These are your basic math environments.
+Inline math is recommended for short, concise expression, like $n = 42$ or $\mathcal{R} = \emptyset$.
+Display math should be used for more complex stuff:
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+\subsection{Equations with Numbers}
+
+Labels can be attached to equations (similar to figures and tables) causing them to be numbered.
+You can now refer to these equations in your text.
+This sentence references \cref{eq:some_equation}.
+
+\begin{equation}
+	x^2 + y^2 = z^2
+	\label{eq:some_equation}
+\end{equation}
+
+\subsection{Theorem Environments}
+
+Mathematical reasoning often involves definitions, theorems, proofs, and sometimes examples.
+Corresponding environments are therefore provided, see \cref{def:some_definition}, \cref{th:some_theorem}, and \cref{ex:some_example}
+
+\begin{definition}
+	We simply define $x = 13$.
+	\label{def:some_definition}
+\end{definition}
+
+\begin{theorem}
+	Let's say $x$ is equal to $13$.
+	\label{th:some_theorem}
+\end{theorem}
+
+\begin{proof}
+	Proof by definition.
+\end{proof}
+
+\begin{example}
+	\begin{align*}
+		2 \cdot x &= 26\\
+		2 \cdot x &= 2 \cdot 13\\
+		x &= 13
+	\end{align*}
+	\label{ex:some_example}
+\end{example}
+
+\subsection{Units}
+
+Leverage the \texttt{siunitx} package to properly typeset large numbers and numbers with units, like \num{12345678} and \SI{9.81}{\meter\per\second^2}.
+You do not need to use it for regular numbers, as they look the same anyway.
+Compare the format of the following three numbers: 13, $13$, \num{13}.
+
+While there is a \texttt{\textbackslash{}percent} unit available, do not use it for percentages as it puts an unwanted space between the number and the percent sign.
+Do it manually like this: 50\%.
+
+\backmatter
+\appendix
+\include{99_appendix}
+\printglossaries
+\bibliography{references}
+
+\end{document}
