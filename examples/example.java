@@ -53,7 +53,7 @@ public class BlobDetector {
     /**
      * returns a sorted list of blobs with given color. The first element is the
      * blob with the biggest area.
-     * 
+     *
      * @param rgbaFrame
      *            rgba matrix of the frame
      * @param color
@@ -62,7 +62,7 @@ public class BlobDetector {
      *            color tolerance for blob searching
      * @param areaThreshold
      *            blobs with area lower than this will be ignored
-     * 
+     *
      * @return sorted list (biggest first)
      */
     public static List<Blob> findBlobs(Mat rgbaFrame, Scalar color,
@@ -117,7 +117,7 @@ public class BlobDetector {
 
     /**
      * find color of touched frame.
-     * 
+     *
      * @param rgbaFrame
      *            the frame to search in
      * @param event
@@ -126,7 +126,7 @@ public class BlobDetector {
      *            frame width
      * @param height
      *            frame height
-     * 
+     *
      * @return a scalar containing the color (HSV)
      */
     public static Scalar findTouchedColor(Mat rgbaFrame, MotionEvent event,
@@ -179,10 +179,10 @@ public class BlobDetector {
 
     /**
      * calibrate camera.
-     * 
+     *
      * @param rgbaFrame
      *            rgba matrix of a frame
-     * 
+     *
      * @return homography matrix
      */
     public static Mat calibrateCamera(Mat rgbaFrame) {
@@ -244,12 +244,12 @@ public class BlobDetector {
 
     /**
      * get ego centric world coords from display coords.
-     * 
+     *
      * @param src
      *            point with image coords
      * @param homography
      *            homography matrix used for transformation
-     * 
+     *
      * @return point with real world coords
      */
     public static Point calcEgoCentCoords(Point src, Mat homography) {
@@ -269,10 +269,10 @@ public class BlobDetector {
 
     /**
      * calculate angle of a given point in ego centric system.
-     * 
+     *
      * @param src
      *            source point with ego centric coords
-     * 
+     *
      * @return angle relative to display center (- left / + right) in degree
      */
     public static Double calcEgoCentAngle(Point src) {
@@ -282,12 +282,12 @@ public class BlobDetector {
 
     /**
      * find a beacon using two blobs.
-     * 
+     *
      * @param list1
      *            list of blobs with bottom color
      * @param list2
      *            list of blobs with top color
-     * 
+     *
      * @return found beacon / null if no beacon was found
      */
     public static Beacon findBeacon(List<Blob> listBot, List<Blob> listTop) {
@@ -327,13 +327,13 @@ public class BlobDetector {
     /**
      * uses two beacons with set coordinates to determin the robot's position.
      * will throw a NullPointerException if beacon coords not propperly set.
-     * 
+     *
      * @param l
      *            left beacon
      * @param r
      *            right beacon
      * @return Point containing robot's position
-     * 
+     *
      * @throws NullPointerException
      */
     public static Point calcAbsCoords(Beacon left, Beacon right)
@@ -370,12 +370,12 @@ public class BlobDetector {
 
     /**
      * calculate absolute angle between two points.
-     * 
+     *
      * @param src
      *            source
      * @param dst
      *            destination
-     * 
+     *
      * @return absolute angle in degree
      */
     public static Double calcAbsAngle(Point src, Point dst) {
@@ -397,14 +397,14 @@ public class BlobDetector {
     /**
      * calulate absolute center view angle using a reference beacon. will throw
      * a NullPointerException if the beacon's coords are not set.
-     * 
+     *
      * @param position
      *            robot absolute coords
      * @param beacon
      *            reference beacon
-     * 
+     *
      * @return absolute angle in degree
-     * 
+     *
      * @throws NullPointerException
      */
     public static Double calcAbsViewAngle(Point pos, Beacon beacon)
