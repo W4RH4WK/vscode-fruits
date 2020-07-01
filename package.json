@@ -2,7 +2,8 @@
     "name": "fruits-theme",
     "displayName": "Fruits Theme",
     "description": "Another vibrant dark theme",
-    "version": "0.4.1",
+    "icon": "images/fruits.png",
+    "version": "0.4.2",
     "publisher": "W4RH4WK",
     "repository": {
         "type": "git",
