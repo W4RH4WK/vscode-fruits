@@ -22,6 +22,8 @@
         "entity.name.tag",
         "storage",
         "support.type.built-in",
+        "source.css support.type.property-name",
+        "source.css support.type.vendored.property-name",
         "source.java keyword.control.new",
         "source.shell support.function.builtin",
         "source.makefile punctuation",
@@ -67,6 +69,7 @@
     },
     {
       "scope": [
+        "source.css variable",
         "source.makefile variable",
         "source.shell variable"
       ],
@@ -339,6 +342,13 @@
       "scope": "source.css entity.name.tag",
       "settings": {
         "foreground": "#569CD6"
+      }
+    },
+    // CSS
+    {
+      "scope": "source.css entity.name.tag",
+      "settings": {
+        "foreground": "#DA70D6"
       }
     },
     // Haskell
