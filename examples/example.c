@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define some_macro(a, b, c)                                                                                            \
-	do {                                                                                                               \
-		foo(a);                                                                                                        \
-		bar(b);                                                                                                        \
-		baz(c);                                                                                                        \
+#define some_macro(a, b, c) \
+	do {                    \
+		foo(a);             \
+		bar(b);             \
+		baz(c);             \
 	} while (0)
 
 typedef enum Result {

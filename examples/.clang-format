@@ -6,8 +6,9 @@ TabWidth: 4
 UseTab: ForIndentation
 BreakBeforeBraces: Linux
 
+AlignEscapedNewlines: Left
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: false
-IndentCaseLabels: false
 BinPackParameters: false
+IndentCaseLabels: false
 ...
