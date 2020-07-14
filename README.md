@@ -12,6 +12,16 @@ It builds upon the following principles:
 - Keywords and operators serve as *anchor* points (blue)
 - Only source code is themed
 
+## Screenshots
+
+![Screenshot Haskell](images/screenshot_haskell.png)
+
+![Screenshot CSS](images/screenshot_css.png)
+
+![Screenshot Rust](images/screenshot_rust.png)
+
+![Screenshot Go](images/screenshot_go.png)
+
 ## Considerations
 
 - Using [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
