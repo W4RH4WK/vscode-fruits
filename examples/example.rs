@@ -250,3 +250,12 @@ impl<'a> From<TypeError<'a>> for CheckError<'a> {
         CheckError::Type(err)
     }
 }
+
+fn read_username_from_file() -> Result<String, io::Error> {
+    let mut f = File::open("username.txt")?;
+    let mut s = String::new();
+
+    f.read_to_string(&mut s)?;
+
+    Ok(s)
+}

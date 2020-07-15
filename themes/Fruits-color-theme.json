@@ -110,7 +110,10 @@
     },
     // control
     {
-      "scope": "keyword.control",
+      "scope": [
+        "keyword.control",
+        "source.rust keyword.operator.error-propagation"
+      ],
       "settings": {
         "foreground": "#F1025B"
       }

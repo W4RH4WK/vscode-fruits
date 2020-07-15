@@ -24,8 +24,9 @@ It builds upon the following principles:
 
 ## Considerations
 
-- Using [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-- Changing variable coloring to adjust the overall color tone:
+- Use [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+- Use [vscode-rust-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-rust-syntax)
+- Change variable coloring to adjust the overall color tone:
   ```
   "editor.tokenColorCustomizations": {
       "variables": "#BDB76B",  // default Visual Assist
