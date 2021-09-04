@@ -24,7 +24,6 @@ It builds upon the following principles:
 
 ## Considerations
 
-- Use [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 - Use [vscode-rust-syntax](https://marketplace.visualstudio.com/items?itemName=dunstontc.vscode-rust-syntax)
 - Change variable coloring to adjust the overall color tone:
   ```
